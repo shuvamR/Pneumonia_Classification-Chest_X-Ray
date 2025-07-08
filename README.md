@@ -2,6 +2,22 @@
 
 ***Dataset Used: [PneumoniaMNIST](https://www.kaggle.com/datasets/rijulshr/pneumoniamnist)***
 
+## ***About Dataset***
+
+### **PneumoniaMNIST**
+A curated collection of chest X-ray images for binary classification of pneumonia:
+#### Images
+- Grayscale, 28×28 pixels
+- Stored in NumPy arrays: ```train_images```, ```val_images```, ```test_images```
+#### Labels
+- Binary: 1 = pneumonia present, 0 = normal
+- Stored alongside ```images astrain_labels```, ```val_labels```, ```test_labels```
+#### Dataset splits
+- Train: ```3 883 images```
+- Validation: ```524 images```
+- Test: ```624 images```
+
+***[Hyperparameters Used](https://github.com/shuvamR/Pneumonia_Classification-Chest_X-Ray/blob/main/note.md)***
 ## Steps to Run
 
 ### 1. FOR CLOUD BASED RUNTIME ENVIRONMENT LIKE KAGGLE
@@ -19,6 +35,7 @@
 *  Step 4: Execute the code.
 
 *Note: If you see any error related to file location, then update the file paths.*
+
 
 ## Evaluation Strategy 
 
