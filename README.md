@@ -18,6 +18,8 @@ A curated collection of chest X-ray images for binary classification of pneumoni
 - Test: ```624 images```
 
 ***[Hyperparameters Used](https://github.com/shuvamR/Pneumonia_Classification-Chest_X-Ray/blob/main/note.md)***
+
+***📦 [Download Trained Model](https://drive.google.com/file/d/1C3T76jAtco3kPs69T0waUXIwzm-dELcT/view?usp=sharing)***
 ## Steps to Run
 
 ### 1. FOR CLOUD BASED RUNTIME ENVIRONMENT LIKE KAGGLE
