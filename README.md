@@ -18,4 +18,31 @@
 
 *Note: If you see any error related to file location, then update the file paths.*
 
+## Evaluation Strategy 
+
+***A. Choose 3-appropriate metrics and justify your choices.***
+| Metric                     | What it means                                    | Why it is important for pneumonia detection                                            |
+| -------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **AUC** (Area Under Curve) | How well the model can tell apart Normal and Pneumonia              | Helps check if model can **separate the two classes well**, even if data is imbalanced |
+| **Recall** (Sensitivity)   | Out of all actual pneumonia cases, how many the model caught        | Important because **missing pneumonia is risky** for the patient                       |
+| **Precision**              | Out of all cases the model says are pneumonia, how many are correct | Important to **avoid false alarms** and **unnecessary treatments**                     |
+
+Also I included ```binary_accuracy``` to get a basic overall idea of how often the model gets predictions right (either class 0 or 1 i.e. Healthy or Pneumonia).But we focus more on AUC, Precision, and Recall, because they are more meaningful for imbalanced data.
+
+***B. Discuss how you detect and mitigate class imbalance in the training set.***
+* Class imbalance means one class has more samples than the other. This can make the model biased toward the majority class (Normal or Healthy) and ignore the minority class (Pneumonia). We can detect imbalance by counting how many images belong to each class.
+* To mitigate this, we can use:
+    1. **Class Weights**: Give more importance to the minority class during training so the model treats both classes fairly.
+    2. **Data Augmentation**: Create more training examples by slightly modifying existing images (e.g., flipping, rotating, zooming), which helps improve model learning, especially for the minority class.
+* These techniques help the model learn better and perform well on both classes.
+
+***C. Describe measures taken to prevent over-fitting***
+| Method                  | What It Does                            | Purpose (How It Prevents Overfitting)                           |
+| ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Data Augmentation**   | Flips, rotates, zooms, and adjusts contrast of training images | Adds variety to training data and prevents memorizing           |
+| **Dropout Layer (0.5)** | Turns off random neurons during training                       | Makes the model less dependent on specific features             |
+| **Transfer Learning**   | Uses a pre-trained InceptionV3 with frozen layers initially    | Starts with strong, general features, avoids overfitting early  |
+| **Fine-Tuning** | Only unfreezes the last 50 layers of the base model            | Updates higher-level features without disturbing base knowledge |
+
+
 
