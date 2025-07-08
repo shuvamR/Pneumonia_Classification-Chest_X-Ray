@@ -1,4 +1,6 @@
-# Pneumonia_Classification-Chest_X-Ray
+# Pneumonia Classification of Chest X-Ray by fine tuning InceptionV3 Model
+
+***Dataset Used: [PneumoniaMNIST](https://www.kaggle.com/datasets/rijulshr/pneumoniamnist)***
 
 ## Steps to Run
 
